@@ -1,0 +1,45 @@
+[build-system]
+requires = [
+    "setuptools>=68",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "OctoPrint-MarlinBft"
+version = "0.1.4"
+description = "Upload files using Marlin Binary File Transfer Mark II"
+authors = [
+    { name = "Charles Willis", email = "charleswillis3@users.noreply.github.com" },
+]
+requires-python = ">=3.7,<4"
+dependencies = [
+    "marlin-binary-protocol>=0.0.7",
+    "backports.time-perf-counter>=0.0.4",
+]
+dynamic = [
+    "license",
+]
+
+[project.entry-points."octoprint.plugin"]
+marlinbft = "octoprint_marlinbft"
+
+[project.urls]
+Homepage = "https://github.com/charleswillis3/OctoPrint-MarlinBft"
+
+[project.optional-dependencies]
+develop = [
+    "go-task-bin",
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = [
+    "octoprint_marlinbft",
+    "octoprint_marlinbft.*",
+]
