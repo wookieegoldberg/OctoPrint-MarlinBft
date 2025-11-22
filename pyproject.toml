@@ -13,8 +13,7 @@ authors = [
 ]
 requires-python = ">=3.7,<4"
 dependencies = [
-    "marlin-binary-protocol>=0.0.7",
-    "backports.time-perf-counter>=0.0.4",
+    "marlin-binary-protocol @ https://github.com/wookieegoldberg/marlin-binary-protocol/archive/refs/heads/quickfix.zip",
 ]
 dynamic = [
     "license",
